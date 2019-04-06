@@ -23,12 +23,12 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="en">
+      <html lang="en" style={{background: "#eff2d8"}}>
         <Head>
           <title>Banter - An app to demo Radiks</title>
           {this.props.styleTags}
         </Head>
-        <body className="custom">
+        <body>
           <Main />
           <NextScript />
         </body>

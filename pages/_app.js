@@ -12,7 +12,7 @@ class MyApp extends App {
     let pageProps = {
       userSession,
     };
-    
+
     configure({
       apiServer: process.env.RADIKS_API_SERVER,
       userSession,

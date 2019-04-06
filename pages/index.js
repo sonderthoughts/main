@@ -63,27 +63,25 @@ class Home extends React.Component {
       <>
         <Flex>
           <Box width={[1, 3 / 4]} mx="auto">
-            <Text.h1 textAlign="center">
-              Banter
-            </Text.h1>
+
+          <Text.h1 color="#00738c" textAlign="center">
+            Sonder
+          </Text.h1>
+          <Text.h4 textAlign="center">
+            The realization that each random passerby is living a life as vivid and complex as your own
+          </Text.h4>
+
+
             {currentUser ? (
               <>
                 <Text.small textAlign="center" display="block">
-                  Logged in as
-                  {' '}
-                  {currentUser.username}
-                  {'. '}
                   <a href="javascript:void(0)" onClick={this.logout}>Log Out</a>
                 </Text.small>
                 <Feed messages={this.props.messages} />
               </>
             ) : (
               <>
-                <Text.p textAlign="center">
-                  Log in with Blockstack to get started.
-                </Text.p>
-
-                <Button mt={3} onClick={this.login} mx="auto" style={{ display: 'block' }}>
+                <Button bg="#00738c" mt={3} onClick={this.login} mx="auto" style={{ display: 'block' }}>
                   Log In
                 </Button>
               </>

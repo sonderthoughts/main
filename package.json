@@ -19,7 +19,9 @@
     "radiks-server": "0.1.8",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-draggable": "^3.2.1",
     "rebass": "^2.3.4",
+    "scss": "^0.2.4",
     "styled-components": "^3.4.9",
     "styled-system": "^3.1.6"
   },
