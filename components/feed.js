@@ -33,10 +33,30 @@ export default class Feed extends React.Component {
     this.setState({
       currentUser: User.currentUser(),
     });
+    Message.addStreamListener(this.newMessageListener.bind(this));
+
   }
 
   async submit() {
+  const { newMessage } = this.state;
+  const message = new Message({
+    content: newMessage,
+    createdBy: this.state.currentUser._id,
+  });
+  const { messages, createdMessageIDs } = this.state;
+  messages.unshift(message);
+  createdMessageIDs[message._id] = true;
+  this.setState({ messages, createdMessageIDs, newMessage: '' });
+  await message.save();
   }
+
+  newMessageListener(message) {
+  const { messages } = this.state;
+  if (!this.state.createdMessageIDs[message._id]) {
+    messages.unshift(message);
+    this.setState({ messages });
+  }
+}
 
   messages() {
     return this.state.messages.map(message => (
