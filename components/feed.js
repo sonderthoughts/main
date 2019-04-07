@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Box, Button } from 'rebass';
+import { Flex, Box, Card, Button, Image } from 'rebass';
 import PropTypes from 'prop-types';
 import { User } from 'radiks';
 
@@ -60,36 +60,41 @@ export default class Feed extends React.Component {
 
   messages() {
     return this.state.messages.map(message => (
-      <div key={message._id}>
-        <Text.p mt={4} mb={1}>
-          {message.attrs.createdBy}
-          {' '}
-          says:
-        </Text.p>
-        <Text.em>{message.attrs.content}</Text.em>
-      </div>
+      <Card
+        fontSize={6}
+        fontWeight='bold'
+        p={5}
+        my={5}
+        bg='#d6ead4'
+        borderRadius={8}
+        boxShadow='0 2px 16px rgba(0, 0, 0, 0.25)'
+      >
+        <div key={message._id}>
+          <Box fontFamily="'Comic Sans', cursive;">
+            {message.attrs.content}
+          </Box>
+        </div>
+      </Card>
     ));
   }
 
   render() {
     return (
       <Flex>
-        <Box width={[1, 1 / 2]} mx="auto" textAlign="center">
-          <Text.p textAlign="center">
-            Create a post:
-          </Text.p>
-
+        <Box fontFamily="'Annie Use Your Telescope', cursive;" width={[1, 1 / 2]} mx="auto" textAlign="center">
           <Input
             mt={3}
             width={1}
-            placeholder="What do you have to say?"
+            placeholder=" "
             value={this.state.newMessage}
             onChange={evt => this.setState({ newMessage: evt.target.value })}
           />
 
-          <Button onClick={() => this.submit()} mt={2}>
-            Submit
-          </Button>
+          <Flex justifyContent="center">
+            <Button bg="#00738c" onClick={() => this.submit()} mt={2}>
+              Share Your Thoughts
+            </Button>
+          </Flex>
 
           {this.messages()}
 
