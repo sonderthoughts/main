@@ -153,12 +153,19 @@ function (_React$Component) {
     key: "messages",
     value: function messages() {
       return this.state.messages.map(function (message) {
-        return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Card"], {
+          fontSize: 6,
+          fontWeight: "bold",
+          p: 5,
+          my: 5,
+          bg: "#d6ead4",
+          borderRadius: 8,
+          boxShadow: "0 2px 16px rgba(0, 0, 0, 0.25)"
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
           key: message._id
-        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].p, {
-          mt: 4,
-          mb: 1
-        }, message.attrs.createdBy, ' ', "says:"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].em, null, message.attrs.content));
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Box"], {
+          fontFamily: "'Comic Sans', cursive;"
+        }, message.attrs.content)));
       });
     }
   }, {
@@ -167,27 +174,29 @@ function (_React$Component) {
       var _this2 = this;
 
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Flex"], null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Box"], {
+        fontFamily: "'Annie Use Your Telescope', cursive;",
         width: [1, 1 / 2],
         mx: "auto",
         textAlign: "center"
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].p, {
-        textAlign: "center"
-      }, "Create a post:"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_input__WEBPACK_IMPORTED_MODULE_14__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_input__WEBPACK_IMPORTED_MODULE_14__["default"], {
         mt: 3,
         width: 1,
-        placeholder: "What do you have to say?",
+        placeholder: " ",
         value: this.state.newMessage,
         onChange: function onChange(evt) {
           return _this2.setState({
             newMessage: evt.target.value
           });
         }
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Flex"], {
+        justifyContent: "center"
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+        bg: "#00738c",
         onClick: function onClick() {
           return _this2.submit();
         },
         mt: 2
-      }, "Submit"), this.messages(), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].p, {
+      }, "Share Your Thoughts")), this.messages(), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].p, {
         textAlign: "center"
       }, "Only showing the most recent", ' ', this.state.messages.length, ' ', "messages.")));
     }
@@ -24644,10 +24653,10 @@ utils.intFromLE = intFromLE;
 /*!********************************************!*\
   !*** ./node_modules/elliptic/package.json ***!
   \********************************************/
-/*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, bugs, bundleDependencies, dependencies, deprecated, description, devDependencies, files, homepage, keywords, license, main, name, repository, scripts, version, default */
+/*! exports provided: _args, _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _spec, _where, author, bugs, dependencies, description, devDependencies, files, homepage, keywords, license, main, name, repository, scripts, version, default */
 /***/ (function(module) {
 
-module.exports = {"_from":"elliptic@^6.4.0","_id":"elliptic@6.4.1","_inBundle":false,"_integrity":"sha512-BsXLz5sqX8OHcsh7CqBMztyXARmGQ3LWPtGjJi6DiJHq5C/qvi9P3OqgswKSDftbu8+IoI/QDTAm2fFnQ9SZSQ==","_location":"/elliptic","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"elliptic@^6.4.0","name":"elliptic","escapedName":"elliptic","rawSpec":"^6.4.0","saveSpec":null,"fetchSpec":"^6.4.0"},"_requiredBy":["/blockstack","/browserify-sign","/create-ecdh","/jsontokens","/key-encoder","/radiks-server","/radiks-server/blockstack","/radiks/blockstack","/tiny-secp256k1"],"_resolved":"https://registry.npmjs.org/elliptic/-/elliptic-6.4.1.tgz","_shasum":"c2d0b7776911b86722c632c3c06c60f2f819939a","_spec":"elliptic@^6.4.0","_where":"/Users/zhaocatherine/Documents/GitHub/main/node_modules/blockstack","author":{"name":"Fedor Indutny","email":"fedor@indutny.com"},"bugs":{"url":"https://github.com/indutny/elliptic/issues"},"bundleDependencies":false,"dependencies":{"bn.js":"^4.4.0","brorand":"^1.0.1","hash.js":"^1.0.0","hmac-drbg":"^1.0.0","inherits":"^2.0.1","minimalistic-assert":"^1.0.0","minimalistic-crypto-utils":"^1.0.0"},"deprecated":false,"description":"EC cryptography","devDependencies":{"brfs":"^1.4.3","coveralls":"^2.11.3","grunt":"^0.4.5","grunt-browserify":"^5.0.0","grunt-cli":"^1.2.0","grunt-contrib-connect":"^1.0.0","grunt-contrib-copy":"^1.0.0","grunt-contrib-uglify":"^1.0.1","grunt-mocha-istanbul":"^3.0.1","grunt-saucelabs":"^8.6.2","istanbul":"^0.4.2","jscs":"^2.9.0","jshint":"^2.6.0","mocha":"^2.1.0"},"files":["lib"],"homepage":"https://github.com/indutny/elliptic","keywords":["EC","Elliptic","curve","Cryptography"],"license":"MIT","main":"lib/elliptic.js","name":"elliptic","repository":{"type":"git","url":"git+ssh://git@github.com/indutny/elliptic.git"},"scripts":{"jscs":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","jshint":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","lint":"npm run jscs && npm run jshint","test":"npm run lint && npm run unit","unit":"istanbul test _mocha --reporter=spec test/index.js","version":"grunt dist && git add dist/"},"version":"6.4.1"};
+module.exports = {"_args":[["elliptic@6.4.1","/Users/zhaocatherine/Documents/GitHub/main"]],"_from":"elliptic@6.4.1","_id":"elliptic@6.4.1","_inBundle":false,"_integrity":"sha512-BsXLz5sqX8OHcsh7CqBMztyXARmGQ3LWPtGjJi6DiJHq5C/qvi9P3OqgswKSDftbu8+IoI/QDTAm2fFnQ9SZSQ==","_location":"/elliptic","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"elliptic@6.4.1","name":"elliptic","escapedName":"elliptic","rawSpec":"6.4.1","saveSpec":null,"fetchSpec":"6.4.1"},"_requiredBy":["/blockstack","/browserify-sign","/create-ecdh","/jsontokens","/key-encoder","/radiks-server","/radiks-server/blockstack","/radiks/blockstack","/tiny-secp256k1"],"_resolved":"https://registry.npmjs.org/elliptic/-/elliptic-6.4.1.tgz","_spec":"6.4.1","_where":"/Users/zhaocatherine/Documents/GitHub/main","author":{"name":"Fedor Indutny","email":"fedor@indutny.com"},"bugs":{"url":"https://github.com/indutny/elliptic/issues"},"dependencies":{"bn.js":"^4.4.0","brorand":"^1.0.1","hash.js":"^1.0.0","hmac-drbg":"^1.0.0","inherits":"^2.0.1","minimalistic-assert":"^1.0.0","minimalistic-crypto-utils":"^1.0.0"},"description":"EC cryptography","devDependencies":{"brfs":"^1.4.3","coveralls":"^2.11.3","grunt":"^0.4.5","grunt-browserify":"^5.0.0","grunt-cli":"^1.2.0","grunt-contrib-connect":"^1.0.0","grunt-contrib-copy":"^1.0.0","grunt-contrib-uglify":"^1.0.1","grunt-mocha-istanbul":"^3.0.1","grunt-saucelabs":"^8.6.2","istanbul":"^0.4.2","jscs":"^2.9.0","jshint":"^2.6.0","mocha":"^2.1.0"},"files":["lib"],"homepage":"https://github.com/indutny/elliptic","keywords":["EC","Elliptic","curve","Cryptography"],"license":"MIT","main":"lib/elliptic.js","name":"elliptic","repository":{"type":"git","url":"git+ssh://git@github.com/indutny/elliptic.git"},"scripts":{"jscs":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","jshint":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","lint":"npm run jscs && npm run jshint","test":"npm run lint && npm run unit","unit":"istanbul test _mocha --reporter=spec test/index.js","version":"grunt dist && git add dist/"},"version":"6.4.1"};
 
 /***/ }),
 
@@ -60560,18 +60569,20 @@ function (_React$Component) {
         width: [1, 3 / 4],
         mx: "auto"
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].h1, {
+        color: "#00738c",
         textAlign: "center"
-      }, "Banter"), currentUser ? react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].small, {
+      }, "Sonder"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].h4, {
+        textAlign: "center"
+      }, "The realization that each random passerby is living a life as vivid and complex as your own"), currentUser ? react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].small, {
         textAlign: "center",
         display: "block"
-      }, "Logged in as", ' ', currentUser.username, '. ', react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
         href: "javascript:void(0)",
         onClick: this.logout
       }, "Log Out")), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_feed__WEBPACK_IMPORTED_MODULE_15__["default"], {
         messages: this.props.messages
-      })) : react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].p, {
-        textAlign: "center"
-      }, "Log in with Blockstack to get started."), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+      })) : react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+        bg: "#00738c",
         mt: 3,
         onClick: this.login,
         mx: "auto",

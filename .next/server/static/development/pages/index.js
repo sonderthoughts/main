@@ -246,12 +246,19 @@ function (_React$Component) {
     key: "messages",
     value: function messages() {
       return this.state.messages.map(function (message) {
-        return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Card"], {
+          fontSize: 6,
+          fontWeight: "bold",
+          p: 5,
+          my: 5,
+          bg: "#d6ead4",
+          borderRadius: 8,
+          boxShadow: "0 2px 16px rgba(0, 0, 0, 0.25)"
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
           key: message._id
-        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].p, {
-          mt: 4,
-          mb: 1
-        }, message.attrs.createdBy, ' ', "says:"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].em, null, message.attrs.content));
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Box"], {
+          fontFamily: "'Comic Sans', cursive;"
+        }, message.attrs.content)));
       });
     }
   }, {
@@ -260,27 +267,29 @@ function (_React$Component) {
       var _this2 = this;
 
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Flex"], null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Box"], {
+        fontFamily: "'Annie Use Your Telescope', cursive;",
         width: [1, 1 / 2],
         mx: "auto",
         textAlign: "center"
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].p, {
-        textAlign: "center"
-      }, "Create a post:"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_input__WEBPACK_IMPORTED_MODULE_14__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_input__WEBPACK_IMPORTED_MODULE_14__["default"], {
         mt: 3,
         width: 1,
-        placeholder: "What do you have to say?",
+        placeholder: " ",
         value: this.state.newMessage,
         onChange: function onChange(evt) {
           return _this2.setState({
             newMessage: evt.target.value
           });
         }
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Flex"], {
+        justifyContent: "center"
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+        bg: "#00738c",
         onClick: function onClick() {
           return _this2.submit();
         },
         mt: 2
-      }, "Submit"), this.messages(), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].p, {
+      }, "Share Your Thoughts")), this.messages(), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].p, {
         textAlign: "center"
       }, "Only showing the most recent", ' ', this.state.messages.length, ' ', "messages.")));
     }
@@ -1023,18 +1032,20 @@ function (_React$Component) {
         width: [1, 3 / 4],
         mx: "auto"
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].h1, {
+        color: "#00738c",
         textAlign: "center"
-      }, "Banter"), currentUser ? react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].small, {
+      }, "Sonder"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].h4, {
+        textAlign: "center"
+      }, "The realization that each random passerby is living a life as vivid and complex as your own"), currentUser ? react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].small, {
         textAlign: "center",
         display: "block"
-      }, "Logged in as", ' ', currentUser.username, '. ', react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
         href: "javascript:void(0)",
         onClick: this.logout
       }, "Log Out")), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_feed__WEBPACK_IMPORTED_MODULE_15__["default"], {
         messages: this.props.messages
-      })) : react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_styled_typography__WEBPACK_IMPORTED_MODULE_13__["default"].p, {
-        textAlign: "center"
-      }, "Log in with Blockstack to get started."), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+      })) : react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+        bg: "#00738c",
         mt: 3,
         onClick: this.login,
         mx: "auto",
