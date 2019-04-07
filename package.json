@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "blockstack": "19.0.0",
+    "build": "next build",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-ws": "^4.0.0",
