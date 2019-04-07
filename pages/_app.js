@@ -7,7 +7,7 @@ import { configure } from 'radiks';
 const appConfig = new AppConfig(['store_write', 'publish_data'], 'http://localhost:5000');
 const userSession = new UserSession({ appConfig });
 
-const { User } = require('../models');
+const { User } = require('./models');
 const mongoose = require('mongoose');
 
 console.log('mongoose stuff initialized')
