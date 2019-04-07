@@ -1,0 +1,13 @@
+{
+    "development": {
+        "database": "radiks-server",
+        "host": "localhost"
+    },
+    "test": {
+        "database": "radiks-server",
+        "host": "localhost"
+    },
+    "production": {
+        "use_env_variable": "MONGODB_URI"
+    }
+}
