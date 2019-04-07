@@ -1,7 +1,7 @@
 {
-  "name": "Banter",
+  "name": "Sonder",
   "start_url": "localhost:5000",
-  "description": "A demo micro-blogging app, built with radiks.",
+  "description": "the realization that each random passerby is living a life as vivid and complex as your own",
   "icons": [
     {
       "src": "https://helloblockstack.com/icon-192x192.png",
