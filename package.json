@@ -1,10 +1,13 @@
 {
   "name": "banter",
   "version": "1.0.0",
-  "description": "A demo app built with radiks",
+  "description": "A shout into the void",
   "main": "index.js",
-  "author": "Hank Stoever",
+  "author": "Sonder Thoughts",
   "license": "MIT",
+  "scripts": {
+    "start": "node server",
+    "heroku-postbuild": "next build"},
   "dependencies": {
     "blockstack": "19.0.0",
     "dotenv": "^6.0.0",
